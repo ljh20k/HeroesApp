@@ -10,16 +10,23 @@
             </div>
             <div class="row" style="height: 15px"></div>
             <div *ngIf="selectedHero != null">
-              <div class="row">
-                <h2>{{selectedHero.name}} details!</h2>
-              </div>
-              <div class="row">
-                <label>id: </label>{{selectedHero.id}}
-              </div>
-              <div class="row">
-                <label>name: </label>
-                <input [(ngModel)]="selectedHero.name" placeholder="name">
-              </div>
+              <md-card>
+                <md-card-title>
+                  {{selectedHero.name}} details!
+                </md-card-title>
+                <md-card-content>
+                  <div>
+                    <md-input-container>
+                      <input mdInput [(ngModel)]="selectedHero.id" placeholder="ID">
+                    </md-input-container>
+                  </div>
+                  <div>
+                    <md-input-container>
+                      <input mdInput [(ngModel)]="selectedHero.name" placeholder="Name">
+                    </md-input-container>
+                  </div>
+                </md-card-content>
+              </md-card>
             </div>
           </div>
 
