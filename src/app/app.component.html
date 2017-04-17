@@ -1,34 +1,37 @@
+<hero-detail [hero]="selectedHero"></hero-detail>
+
 <div class="row">
   <div class="container">
     <div class="row">
-      <div class="offset-2 col-8 offset-2">
+      <div class="offset-3 col-6 offset-3">
 
         <div class="panel panel-default">
-          <div class="panel-heading">
-            <div class="row">
-              <h1>{{title}}</h1>
-            </div>
-            <div class="row" style="height: 15px"></div>
-            <div *ngIf="selectedHero != null">
-              <md-card>
-                <md-card-title>
-                  {{selectedHero.name}} details!
-                </md-card-title>
-                <md-card-content>
-                  <div>
-                    <md-input-container>
-                      <input mdInput [(ngModel)]="selectedHero.id" placeholder="ID">
-                    </md-input-container>
-                  </div>
-                  <div>
-                    <md-input-container>
-                      <input mdInput [(ngModel)]="selectedHero.name" placeholder="Name">
-                    </md-input-container>
-                  </div>
-                </md-card-content>
-              </md-card>
-            </div>
-          </div>
+          <!--<div class="panel-heading">-->
+            <!--<div class="row">-->
+              <!--<h1>{{title}}</h1>-->
+            <!--</div>-->
+            <!--<div class="row" style="height: 15px"></div>-->
+            <!--<div *ngIf="selectedHero != null">-->
+              <!--<md-card>-->
+                <!--<md-card-title>-->
+                  <!--{{selectedHero.name}} details!-->
+                <!--</md-card-title>-->
+                <!--<md-card-content>-->
+                  <!--<div>-->
+                    <!--<md-input-container>-->
+                      <!--<input mdInput [(ngModel)]="selectedHero.id" placeholder="ID">-->
+                    <!--</md-input-container>-->
+                  <!--</div>-->
+                  <!--<div>-->
+                    <!--<md-input-container>-->
+                      <!--<input mdInput [(ngModel)]="selectedHero.name" placeholder="Name">-->
+                    <!--</md-input-container>-->
+                  <!--</div>-->
+                <!--</md-card-content>-->
+              <!--</md-card>-->
+            <!--</div>-->
+          <!--</div>-->
+
 
           <div class="row" style="height: 15px"></div>
 
@@ -44,9 +47,9 @@
               </ul>
             </div>
           </div>
-
         </div>
       </div>
     </div>
   </div>
 </div>
+
