@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MaterialModule} from "@angular/material";
+import { MaterialModule } from "@angular/material";
 
 @NgModule({
   declarations: [
