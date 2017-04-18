@@ -3,15 +3,18 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
+import { HeroesComponent } from './heroes.component';
 import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from "@angular/material";
 import { HeroDetailComponent } from './hero-detail.component';
+import { HeroService } from './hero.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroDetailComponent
+    HeroDetailComponent,
+    HeroesComponent
   ],
   imports: [
     [BrowserAnimationsModule],
@@ -21,7 +24,7 @@ import { HeroDetailComponent } from './hero-detail.component';
     HttpModule,
     MaterialModule
   ],
-  providers: [],
+  providers: [HeroService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
