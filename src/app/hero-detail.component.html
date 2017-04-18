@@ -1,13 +1,18 @@
-<div *ngIf="hero != null"><md-card>
-  <md-card-title>
-    {{hero.name}} details!
-  </md-card-title>
-  <md-card-content>
-    <md-input-container>
-      <input mdInput [(ngModel)]="hero.id" placeholder="ID">
-    </md-input-container>
-    <md-input-container>
-      <input mdInput [(ngModel)]="hero.name" placeholder="Name">
-    </md-input-container>
-  </md-card-content>
-</md-card></div>
+<div *ngIf="hero != null">
+  <md-card>
+    <md-card-title>
+      {{hero.name}} details!
+    </md-card-title>
+    <md-card-content>
+      <md-input-container>
+        <input mdInput [(ngModel)]="hero.id" placeholder="ID">
+      </md-input-container>
+      <md-input-container>
+        <input mdInput [(ngModel)]="hero.name" placeholder="Name">
+      </md-input-container>
+    </md-card-content>
+
+    <button class="btn btn-secondary" (click)="goBack()">Back</button>
+
+  </md-card>
+</div>
