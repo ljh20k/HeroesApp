@@ -1,27 +1,13 @@
-<div class="row">
-  <div class="container">
-    <div class="row">
-      <div class="offset-3 col-6 offset-3">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <div *ngIf="hero != null">
-              <md-card>
-                <md-card-title>
-                  {{hero.name}} details!
-                </md-card-title>
-                <md-card-content>
-                  <md-input-container>
-                    <input mdInput [(ngModel)]="hero.id" placeholder="ID">
-                  </md-input-container>
-                  <md-input-container>
-                    <input mdInput [(ngModel)]="hero.name" placeholder="Name">
-                  </md-input-container>
-                </md-card-content>
-              </md-card>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<div *ngIf="hero != null"><md-card>
+  <md-card-title>
+    {{hero.name}} details!
+  </md-card-title>
+  <md-card-content>
+    <md-input-container>
+      <input mdInput [(ngModel)]="hero.id" placeholder="ID">
+    </md-input-container>
+    <md-input-container>
+      <input mdInput [(ngModel)]="hero.name" placeholder="Name">
+    </md-input-container>
+  </md-card-content>
+</md-card></div>

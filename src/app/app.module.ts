@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from "@angular/material";
 import { HeroDetailComponent } from './hero-detail.component';
 import { HeroService } from './hero.service';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,17 @@ import { HeroService } from './hero.service';
     BrowserModule,
     FormsModule,
     HttpModule,
-    MaterialModule
+    MaterialModule,
+    RouterModule.forRoot([
+      //{
+      //  path: '',
+      //
+      //},
+      {
+        path: 'heroes',
+        component: HeroesComponent
+      }
+    ])
   ],
   providers: [HeroService],
   bootstrap: [AppComponent]
