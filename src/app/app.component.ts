@@ -1,31 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { Hero } from './hero';
-import { HeroService } from './hero.service';
-//import { HEROES } from './mock-heroes';
+import { Component } from '@angular/core';
 
-@Component({
+@Component ({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  providers: [HeroService] //To teach the injector how to make a HeroService
+  templateUrl: './app.component.html'
 })
 
-export class AppComponent implements OnInit{
+export class AppComponent {
   title = 'Tour of Heroes';
-  heroes : Hero[];
-  selectedHero: Hero;
-
-  constructor(private heroService: HeroService) {}
-
-  getHeroes(): void {
-  this.heroService.getHeroes().then(heroes => this.heroes = heroes);
-  }
-
-  ngOnInit():void {
-    this.getHeroes()
-  }
-
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
-  }
 }
